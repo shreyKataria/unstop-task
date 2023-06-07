@@ -1,0 +1,166 @@
+
+:root {
+  --green-color: #61c35d;
+  --grey-color: #a9a9a9;  
+  --blue-color: #6e9ddc;
+}
+.seat-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+/* seats */
+.seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: var(--green-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat.reserved {
+  background-color: var(--grey-color);  
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: var(--blue-color);
+}
+
+.seat:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transform: translateY(-1px);
+}
+
+
+.reservation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 2rem;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.reservation-form {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.reservation-form input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.green-box {
+  background-color: #61c35d;
+}
+
+.grey-box {
+  background-color: #a9a9a9;
+  margin-left: 10px;
+}
+.blue-box {
+  background-color: #3498db;
+  margin-left: 10px;
+}
+.legend span {
+  margin-right: 15px;
+}
+
+/* buttons */
+button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .20rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 1rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+button:hover,
+button:focus{
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: var(--blue-color);
+
+}
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+.confirm-button{
+  margin-top: 20px;
+}
+.confirm-button:hover {
+  background-color: #4c9d4e;
+  color: #F0F0F1;
+}
